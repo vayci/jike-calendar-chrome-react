@@ -14,7 +14,6 @@ class App extends Component {
         authToken: '',
         refreshToken: '',
         accessToken: ''
-
     }
   }
 
@@ -33,23 +32,20 @@ class App extends Component {
 
   componentDidMount(){
     //localstorage 获取token 请求数据
-    this.state.authToken = window.localStorage.getItem('auth-token');
-    this.state.refreshToken = window.localStorage.getItem('refresh-token');
-    this.state.accessToken = window.localStorage.getItem('access-token');
-    let res = this.getdailyCards()
-    if(!res){
-      //失败则刷新token再请求
-      this.refreshAccessToken()
-      let as = this.getdailyCards()
-      if(!as){
-        //还失败扫码重新登录
-        this.refreshQrCode()
-      }
-    }
-  }
-
-  refreshAccessToken = () =>{
-
+    // this.state.authToken = window.localStorage.getItem('auth-token');
+    // this.state.refreshToken = window.localStorage.getItem('refresh-token');
+    // this.state.accessToken = window.localStorage.getItem('access-token');
+    // let res = this.getdailyCards()
+    // if(!res){
+    //   //失败则刷新token再请求
+    //   this.refreshAccessToken()
+    //   let as = this.getdailyCards()
+    //   if(!as){
+    //     //还失败扫码重新登录
+    //     this.refreshQrCode()
+    //   }
+    // }
+    this.refreshQrCode()
   }
 
   refreshQrCode = () => {
@@ -100,7 +96,7 @@ class App extends Component {
           _this.state.authToken = res.data['token']
           _this.state.refreshToken = res.data['x-jike-refresh-token']
           _this.state.accessToken = res.data['x-jike-access-token']
-
+        console.log(res.data['x-jike-access-token'])
         window.localStorage.setItem('auth-token',res.data['token']);
         window.localStorage.setItem('refresh-token',res.data['x-jike-refresh-token']);
         window.localStorage.setItem('access-token',res.data['x-jike-access-token']);
@@ -128,16 +124,17 @@ class App extends Component {
   }
 
   getdailyCards = () =>{
+      console.log('请求日历数据')
       let _this = this
-      let date = moment().format('YYYY-MM-DD');  
-      console.log(date)
       console.log(_this.state.accessToken)
+      let date = moment().format('YYYY-MM-DD');  
       axios.get('https://app.jike.ruguoapp.com/1.0/dailyCards/list',{
         params:{
           'coordsys':'wgs84',
-          'date':date
+          'date':date,
+          'x-jike-access-token':_this.state.accessToken
         },
-        headers: {' x-jike-access-token': _this.state.accessToken}
+        headers: {'x-jike-access-token': _this.state.accessToken}
       }).then(res=>{
         console.log(res)
         return true
