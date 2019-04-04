@@ -1,4 +1,6 @@
 .App {
+  width: 272px;
+  height: 368px;
   text-align: center;
 }
 
@@ -7,15 +9,21 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.Qrcode{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #fedb36;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin);
   color: white;
 }
 

@@ -1,15 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 2,
+  "name": "即刻黄历",
+  "description": "My first chrome extension.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "image/icon.png",
+    "128": "image/icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "image/icon.png",
+      "38": "image/icon.png"
+    },
+    "default_title": "即刻黄历",
+    "default_popup": "index.html"
+  },
+  "permissions": [ "activeTab", "alarms", "background", "notifications", "storage", "tabs", "\u003Call_urls>" ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
 }
