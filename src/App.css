@@ -1,7 +1,11 @@
 .App {
-  width: 272px;
-  height: 368px;
+  width: 224.67px;
+  height: 303px;
   text-align: center;
+  display: flex;
+  background: #fbe44f;
+  flex-direction: column;
+  color: #37432f;
 }
 
 .App-logo {
@@ -15,9 +19,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #fff;
 }
 .App-header {
-  background-color: #fedb36;
+  background-color: #fbe44f;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -30,6 +35,84 @@
 .App-link {
   color: #61dafb;
 }
+.App-body{
+  background-color: #fbe44f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App-body-top{
+  width: 82.5vw;
+  height: 82.5vh;
+}
+.App-body-bottom{
+  width: 100vw;
+  height: 17.5vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Bold-line{
+ background: #000;
+ width: 80vw;
+ height: 4px;
+ margin-top: 7vh;
+}
+.line{
+  background: #000;
+  width: 80vw;
+  height: 1px;
+  margin-top: 1vh;
+  margin-bottom: 4vh;
+}
+
+.Cal-week{
+  margin-top: 10%;
+  height: 5vh;
+  font-weight: 600;
+}
+.Cal-day{
+  font-size: 70px;
+  font-weight: 600;
+  height: 20vh;
+  line-height: 20vh;
+  margin-top: 3vh;
+}
+.Cal-fortune{
+  font-size: 25px;
+  height: 10vh;
+  line-height: 10vh;
+  margin-top: 3vh;
+}
+.Cal-text{
+  text-align: left;
+  font-weight: 600;
+}
+.Cal-author{
+  text-align: left;
+  font-weight: lighter;
+  font-size: xx-small;
+  margin-top: 1vh;
+}
+.Cal-first{
+  text-align: left;
+  width: 87vw;
+}
+.Cal-second{
+  text-align: left;
+  width: 87vw;
+  margin-top: 1vh;
+}
+
+
+
+
+
+
+
+
 
 @keyframes App-logo-spin {
   from {
