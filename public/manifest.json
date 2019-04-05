@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
   "name": "即刻黄历",
-  "description": "My first chrome extension.",
+  "description": "非官方即刻黄历",
   "version": "1.0.0",
   "icons": {
-    "16": "image/icon.png",
-    "128": "image/icon.png"
+    "16": "image/icon16.png",
+    "128": "image/icon120.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "image/icon.png",
-      "38": "image/icon.png"
+      "19": "image/icon19.png",
+      "38": "image/icon38.png"
     },
     "default_title": "即刻黄历",
     "default_popup": "index.html"

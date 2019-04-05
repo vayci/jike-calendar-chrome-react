@@ -165,10 +165,7 @@ class App extends Component {
     let dateStr = cardData.date
     let dateObj = moment(dateStr)
     let dayStr = dateObj.format('DD')
-    let year = dateObj.format('YYYY')
-    let week = dateObj.format('dddd')
-    let month = dateObj.format('MMMM')
-    let str = year +' '+month+' '+week
+    let str = dateObj.format('YYYY') +' '+dateObj.format('MMMM')+' '+dateObj.format('dddd')
     this.setState({
       login:true,
       cache:true,
