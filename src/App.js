@@ -157,7 +157,7 @@ class App extends Component {
          console.log('请求日历数据成功')
       }).catch(e=>{
         console.log('获取数据异常') 
-        _this.tryRefreshToken()
+        _this.tryRefreshToken(_this.state.refreshToken)
       })
   }
 
