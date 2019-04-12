@@ -58,7 +58,7 @@
  background: #000;
  width: 82.5vw;
  height: 4px;
- margin-top: 8vh;
+ margin-top: 5vh;
 }
 .line{
   background: #000;
@@ -78,7 +78,7 @@
   font-weight: 600;
   height: 20vh;
   line-height: 20vh;
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
 .Cal-fortune{
   font-size: 23px;
