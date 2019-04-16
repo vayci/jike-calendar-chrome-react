@@ -58,14 +58,14 @@
  background: #000;
  width: 82.5vw;
  height: 4px;
- margin-top: 5vh;
+ margin-top: 11vh;
 }
 .line{
   background: #000;
   width: 82.5vw;
   height: 1px;
   margin-top: 1vh;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 
 .Cal-week{
@@ -78,13 +78,13 @@
   font-weight: 600;
   height: 20vh;
   line-height: 20vh;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 .Cal-fortune{
-  font-size: 23px;
+  font-size: 25px;
   height: 10vh;
   line-height: 10vh;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 .Cal-text{
   text-align: left;
