@@ -15,7 +15,7 @@
     "default_title": "即刻黄历",
     "default_popup": "index.html"
   },
-  "permissions": [ "activeTab", "alarms", "background", "notifications", "storage", "tabs", "\u003Call_urls>" ],
+  "permissions": [ "alarms", "background", "notifications", "storage",  "https://app.jike.ruguoapp.com/*" ],
   "background": {
     "persistent": false,
     "scripts": [
