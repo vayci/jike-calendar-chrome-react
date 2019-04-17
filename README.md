@@ -30,7 +30,14 @@
 
 ## 下载
 
-插件正在努力上架Chrome网上商店中，目前只能打开Chrome浏览器开发者模式，采用目录加载的方式进行加载使用。
+### 商店安装(推荐)
+
+扩展Chrome网上应用店链接: [即刻黄历](https://chrome.google.com/webstore/detail/%E5%8D%B3%E5%88%BB%E9%BB%84%E5%8E%86/mchjdojlonajklbdifjmmjmekkgmgbmd)
+
+
+
+### 本地安装
+如果没有梯子，无法打开Chrome应用商店，则可以打开Chrome浏览器开发者模式，采用目录加载的方式进行加载使用。
 
 1. 下载[Chrome Extension源码](https://github.com/vayci/jike-calendar-chrome-react/releases/download/V1.0.0/jike-calendar.zip)
 
@@ -44,13 +51,18 @@
 
 ## 编译
 
-1.设置环境变量 INLINE_RUNTIME_CHUNK=false ，如Windows下
+1.Install
+
+> yarn install
+
+
+2.设置环境变量 INLINE_RUNTIME_CHUNK=false ，如Windows下
 
 >  set INLINE_RUNTIME_CHUNK=false 
 
 
 
-2.Build
+3.Build
 
 > yarn build
 
