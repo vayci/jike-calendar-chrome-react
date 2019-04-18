@@ -89,6 +89,15 @@
 .Cal-text{
   text-align: left;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  -webkit-line-clamp: 2;
+  cursor: pointer;
+
 }
 .Cal-author{
   text-align: left;

@@ -41,7 +41,7 @@ class App extends Component {
               <div className='Cal-fortune'>{this.state.dailyData.fortune}</div>
               <div className='Bold-line'></div>
               <div className='line'></div>
-              <div className='Cal-text'>{this.state.dailyData.featuredContent.text}</div>
+              <div className='Cal-text' onClick={this.onClickText.bind(this)}>{this.state.dailyData.featuredContent.text}</div>
               <div className='Cal-author'>via {this.state.dailyData.featuredContent.author}</div>
             </div>
             <div className='App-body-bottom'>
@@ -162,6 +162,7 @@ class App extends Component {
   }
 
   parseCardData = (cardData) => {
+    console.log(cardData)
     let dateStr = cardData.date
     let dateObj = moment(dateStr)
     let dayStr = dateObj.format('DD')
@@ -225,6 +226,19 @@ class App extends Component {
       console.log('刷新token失败')
       _this.refreshQrCode()
     })
+  }
+
+  onClickText = (e)=>{
+    let mUrl = this.state.dailyData.featuredContent.url
+    let postId = mUrl.match(/originalPosts\/(\S*)/);
+    if(postId[1]){
+      let webUrl = "https://web.okjike.com/post-detail/"+postId[1]+"/originalPost"
+      // eslint-disable-next-line
+      chrome.tabs.create({
+        'url': webUrl
+      });
+    }
+
   }
 }
 
