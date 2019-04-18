@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "即刻黄历",
   "description": "非官方即刻黄历",
-  "version": "1.0.0",
+  "version": "1.0.0.20",
   "icons": {
     "16": "image/icon16.png",
     "128": "image/icon120.png"
