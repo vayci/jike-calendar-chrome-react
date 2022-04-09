@@ -5,7 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "axios": "^0.18.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "qrcode.react": "^0.9.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
